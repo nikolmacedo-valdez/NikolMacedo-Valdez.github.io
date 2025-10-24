@@ -1,0 +1,213 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f0ff; /* Fondo lila claro */
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Encabezado */
+header {
+    margin-bottom: 30px;
+    padding: 25px;
+    background-color: #8a2be2; /* Lila principal */
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid white;
+    flex-shrink: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+/* Secciones */
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #8a2be2; /* Lila principal */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e6d7ff;
+    padding-bottom: 5px;
+}
+
+/* Botones y enlaces */
+.btn {
+    display: inline-block;
+    background-color: #9370db; /* Lila medio */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #8a2be2; /* Lila más oscuro al pasar el mouse */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Lista de cursos */
+.course-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.course-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #e6d7ff;
+    transition: background-color 0.2s;
+}
+
+.course-item:hover {
+    background-color: #f9f5ff;
+}
+
+.course-item:last-child {
+    border-bottom: none;
+}
+
+.course-name {
+    font-weight: bold;
+    color: #5e4a8c;
+}
+
+.professor-link {
+    color: #9370db;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.professor-link:hover {
+    color: #8a2be2;
+    background-color: #f0e6ff;
+    text-decoration: none;
+}
+
+/* Enlaces de compañeros */
+.classmate-links {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Información de contacto */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-link {
+    color: #9370db;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    padding: 8px 0;
+    display: inline-block;
+    width: fit-content;
+}
+
+.contact-link:hover {
+    color: #8a2be2;
+    text-decoration: underline;
+    transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .profile-info h1 {
+        font-size: 1.8rem;
+    }
+    
+    .course-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .professor-link {
+        align-self: flex-end;
+    }
+    
+    .classmate-links {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
